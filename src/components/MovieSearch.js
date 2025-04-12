@@ -34,7 +34,7 @@ return (
     <div className='header' style={{display:"flex" , justifyContent:"space-between" ,alignItems:"center" ,
         color:"#fff" , padding:"1rem"
     }}>
-    <h2>Movie apppppppppppppp</h2>
+    <h2>Movie</h2>
     <select id='all' style={{width:"160px",padding:"14px", height:"60px" , fontSize:"20px" ,textTransform:"capitalize" ,
         backgroundColor:"#273746" ,color:"#fff" ,borderRadius:"1.5rem" ,fontWeight:"bold"
     }}>
