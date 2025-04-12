@@ -1,0 +1,46 @@
+
+.moviesearch .nav{
+    background-color: #273746 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 3rem;
+    flex-wrap: wrap;
+}
+.moviesearch .nav .inp{
+    border: 1px solid #999;
+    background-color: #6e747a;
+    border-radius: 1.5rem;
+    width: 800px;
+    position: relative;
+
+}
+.moviesearch .nav .inp input{
+    padding: .5rem;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    color: #ffff;
+    font-weight: bold;
+    width: 100%;
+}
+.moviesearch .nav .inp input:focus{
+    outline: none;
+}
+.moviesearch .nav .inp .search-icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-49%,23%);
+    font-size: 30px;
+    cursor: pointer;
+    color: #dfdddd;
+}
+.moviesearch .nav .inp .search-icon:hover{
+    color: #fff;
+}
+.moviesearch .nav .icon .film-icon{
+    font-size: 50px;
+
+}
