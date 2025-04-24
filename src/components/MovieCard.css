@@ -1,47 +1,101 @@
-.body-movie {
-    background-color: #000;
-    color: #fff; /* تغيير النص إلى اللون الأبيض */
-    min-height: 100vh; /* ضمان أن الخلفية السوداء تغطي كامل الشاشة */
-  }
-  
-  .movie {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+.main_card {
+  width: 18rem;
+  padding: 20px 0;
+  min-height: 700px;
+  background-color: #273746;
+  color: #fff;
+  margin: 30px 0;
+}
+
+.card_body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card_body .card-title {
+  font-size: 1.2rem;
+}
+
+.card_body .card-text {
+  font-size: 1rem;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.view_details_btn {
+  width: 80%;
+  font-size: 18px;
+}
+
+/* تخصيص الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .main_card {
     width: 90%;
-    margin: auto;
-    padding: 2rem;
+    margin: 15px 0;
+    min-height: auto;
   }
-  
-  .movie .card_box {
-    box-shadow: 2px 2px 5px 10px #0c0202;
-    background-color: #222; /* خلفية داكنة للبطاقات */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير التحول عند التمرير */
-    border-radius: 8px; /* إضافة حواف دائرية للبطاقات */
-    padding: 1rem;
-    text-align: center;
+
+  .card_body {
+    padding: 10px;
   }
-  
-  .movie .card_box:hover {
-    transform: translateY(-5px); /* تحريك البطاقة إلى الأعلى قليلاً عند التمرير */
-    box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.2); /* زيادة الظل عند التمرير */
-  }
-  
-  .movie .card_box img {
-    overflow: hidden;
-    width: 100%;
-    height: 250px;
-    object-fit: cover; /* تحسين توافق الصورة داخل المربع */
-    border-radius: 5px;
-  }
-  
-  .movie .card_box h2 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-  }
-  
-  .movie .card_box p {
+
+  .card_body .card-title {
     font-size: 1rem;
-    margin: 5px 0;
+  }
+
+  .card_body .card-text {
+    font-size: 0.9rem;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
   }
   
+  .btns .fav{
+    width: 100%;
+    padding: 12px;
+    font-size: 20px;
+  }
+  .view_details_btn {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main_card {
+    width: 100%;
+    margin: 10px 0;
+    min-height: auto;
+  }
+
+  .card_body {
+    padding: 5px;
+  }
+
+  .card_body .card-title {
+    font-size: 0.9rem;
+  }
+
+  .card_body .card-text {
+    font-size: 0.8rem;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .view_details_btn {
+    font-size: 14px;
+  }
+}

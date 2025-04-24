@@ -17,13 +17,16 @@
 
 }
 .moviesearch .nav .inp input{
-    padding: .5rem;
-    font-size: 18px;
-    border: none;
-    background: transparent;
-    color: #ffff;
-    font-weight: bold;
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #ccc;
     width: 100%;
+}
+.moviesearch .nav .inp input::placeholder{
+    color: #888;
 }
 .moviesearch .nav .inp input:focus{
     outline: none;
@@ -35,10 +38,10 @@
     transform: translate(-49%,23%);
     font-size: 30px;
     cursor: pointer;
-    color: #dfdddd;
+    color: #0f0202;
 }
 .moviesearch .nav .inp .search-icon:hover{
-    color: #fff;
+    color: #1812127c;
 }
 .moviesearch .nav .icon .film-icon{
     font-size: 50px;

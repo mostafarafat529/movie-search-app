@@ -16,8 +16,6 @@ const response = await fetch(`${BASE_URL}&s=${title}`);
 const data = await response.json();
 if (data.Response === "True") {
     setMovies(data.Search);
-    console.log(data)
-    console.log(data.Search)
 } else {
     setMovies([]);
 }
@@ -35,12 +33,19 @@ return (
         color:"#fff" , padding:"1rem"
     }}>
     <h2>Movie</h2>
-    <select id='all' style={{width:"160px",padding:"14px", height:"60px" , fontSize:"20px" ,textTransform:"capitalize" ,
-        backgroundColor:"#273746" ,color:"#fff" ,borderRadius:"1.5rem" ,fontWeight:"bold"
-    }}>
-      <option onClick={()=>navigate("/")}  value={1}>all</option>
-      <option onClick={()=>navigate("/favorite")} value={2}>favorite</option>
-    </select>
+    <select
+  id='all'
+  onChange={(e) => {
+    const value = e.target.value;
+    if (value === "1") navigate("/");
+    if (value === "2") navigate("/favorite");
+  }}
+  style={{width: "160px", padding: "14px", height: "60px", fontSize: "20px", textTransform: "capitalize",
+    backgroundColor: "#273746", color: "#fff", borderRadius: "1.5rem", fontWeight: "bold"}}>
+  <option value="1">all</option>
+  <option value="2">favorite</option>
+</select>
+
   </div>
     <Container>
     <Row>
