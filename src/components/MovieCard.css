@@ -2,7 +2,7 @@
   width: 18rem;
   padding: 20px 0;
   min-height: 700px;
-  background-color: #273746;
+  background-color: #273746 !important;
   color: #fff;
   margin: 30px 0;
 }
